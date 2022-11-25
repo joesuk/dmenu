@@ -1,0 +1,1 @@
+/home/amaryllis/.config/headers/dmenu_config.h
