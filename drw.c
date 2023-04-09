@@ -339,7 +339,6 @@ drw_text(Drw *drw, int x, int y, unsigned int w, unsigned int h, unsigned int lp
 			fcpattern = FcPatternDuplicate(drw->fonts->pattern);
 			FcPatternAddCharSet(fcpattern, FC_CHARSET, fccharset);
 			FcPatternAddBool(fcpattern, FC_SCALABLE, FcTrue);
-			FcPatternAddBool(fcpattern, FC_COLOR, FcFalse);
 
 			FcConfigSubstitute(NULL, fcpattern, FcMatchPattern);
 			FcDefaultSubstitute(fcpattern);
@@ -422,4 +421,3 @@ drw_cur_free(Drw *drw, Cur *cursor)
 	XFreeCursor(drw->dpy, cursor->cursor);
 	free(cursor);
 }
-
